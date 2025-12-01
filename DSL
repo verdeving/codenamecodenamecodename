@@ -1,0 +1,17 @@
+no multithread and no cache system in the former version
+don't have more lines or columns in a line equal or greater than 2 ^ 32
+Core -> utilities (CLI commands, filesystem interop, project configuration, etc... this must be in the former version) & 
+        miscellaneous validations (CLI commands validation, project integration, etc... don't need to be in the former version)
+Tear (.tear) -> cache (don't need to be in the former version)
+Brain (.brain) -> global configuration not affecting the cache (don't need to be in the former version)
+Sclera (.sclera) -> global configuration affecting the cache (don't need to be in the former version)
+Cornea (.cornea) -> project configuration file, for the compilation units
+Retina (.retina) -> Iris native library format (don't need to be in the former version)
+Pupil (.pupil) -> code for the GPU (or TPU or others...) to execute, where we do the lex and parse, and output the ast (don't need to be in the former version)
+Iris (.iris) -> code for the CPU to execute, where we do the lex and parse, and output the ast
+Lens -> static analyzer, where we validate the ast, evaluate compile-time code, mutate the ast if needed (if static reflection gets these capabilities), and output the IR
+Optic -> optimizer over the IR
+Cilliary -> lsp server (don't need to be in the former version)
+Choroid -> debugger
+Nerve -> linker
+Macula -> bundle generator (don't need to be in the former version), documentation generator and test executor
